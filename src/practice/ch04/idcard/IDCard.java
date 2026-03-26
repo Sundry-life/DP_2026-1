@@ -1,11 +1,12 @@
-package practice.ch04.idcard; 
+package practice.ch04.idcard;
 
 import practice.ch04.framework.Product;
 
 public class IDCard extends Product {
     private String owner;
 
-    IDCard(String owner) {
+    IDCard(String owner) { //생략 -> 자동 private
+        //부모의 인자없는 생성자가 호출되게 됨. 
         System.out.println(owner + "의 카드를 만듭니다.");
         this.owner = owner;
     }
