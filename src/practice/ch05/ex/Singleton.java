@@ -8,7 +8,7 @@ public class Singleton {
         slowdown(); //인스턴스 생성될 때, 시간을 좀 지연시켜보는 것. 
     }
 
-    public static Singleton getInstance() { //getInstance 호출될때, 
+    public static synchronized Singleton getInstance() { //getInstance 호출될때, 
         if (singleton == null) { // 널이면 만들겠다. 
             singleton = new Singleton(); 
             //만들어지면, 이제 널이 아니게 되기에, 그 후 호출되는 getInstace는 if문에 해당 안됨. 
