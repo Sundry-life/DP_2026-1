@@ -9,9 +9,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("20240856 김선아");
         System.out.println("[3-1] : IDCard 정보 확장 ");
-        Factory factory1 = new IDCardFactory("2026-03-20"); //왜 인자 public으로 바꿨는데 오류남? ㅈㄹ
-        //생성자 protected로 해야함 암것도 안썻서 private됨 
-        //엥 아니 protected도 오류남 왜
+        Factory factory1 = new IDCardFactory("2026-03-20"); 
         Product card1 = factory1.create("Kim Youngjin");
         Product card2  = factory1.create("Son Heungimin");
         card1.use();
