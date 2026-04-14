@@ -18,11 +18,11 @@ public class Main {
 
 
     //Player 2명 생성
-    Player player1 = new Player("A", new WinningStrategy(314));
-    Player player2 = new Player("B", new WinningStrategy(13)); //seed는 다르게 = 그래야 다른 순서로 나오니까 
+    Player player1 = new Player("A", new ProbStrategy(300));
+    Player player2 = new Player("B", new WinningStrategy(5)); //seed는 다르게 = 그래야 다른 순서로 나오니까 
 
     //대결 
-    for(int i = 0; i < 10; i ++){
+    for(int i = 0; i < 1000; i ++){
         //플레이어 2명에게 각각 손을 얻고
         Hand h1  = player1.nextHand();
         Hand h2 = player2.nextHand();
@@ -43,7 +43,9 @@ public class Main {
             player2.even();
         }
     }
+    System.out.println("total result");
+    System.out.println(player1);
+    System.out.println(player2);
 
     }
-
 }

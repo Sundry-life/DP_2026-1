@@ -10,7 +10,7 @@ public class RandomStrategy implements Strategy {
     }
 
     @Override
-    public void study(boolean win) {
+    public void study(boolean win) { //study는 할 거 없어서 비워둠
     }
 
     @Override
