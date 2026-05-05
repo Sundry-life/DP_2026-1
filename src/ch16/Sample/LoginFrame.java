@@ -1,4 +1,4 @@
-package ch16.Sample;
+package practice.ch16;
 
 import java.awt.CheckboxGroup;
 import java.awt.Color;
