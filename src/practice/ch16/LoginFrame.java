@@ -37,7 +37,8 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         createColleagues(); //이건 길어서 뒤로 뺌. (오버라이드 한거 밑에 있음.)
 
         // 배치한다 
-        // 4X2 그리드에 배치(순서대로)  //가로로 순서 x 세로로 순서 o
+        // 4X2 그리드에 배치(순서대로)  
+        //가로로 순차적으로
         add(checkGuest);
         add(checkLogin);
         add(new Label("Username:"));
@@ -118,9 +119,9 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     // textUser 또는 textPass의 변경이 있다 //즉, 입력하는 이벤트가 있을 때.
     // 각 Colleage의 활성/비활성을 판정한다
     private void userpassChanged() {
-        if (textUser.getText().length() > 0) { //login 입력값이 있을 때.
+        if (textUser.getText().length() >= 4) { //login 입력값이 있을 때.
             textPass.setColleagueEnabled(true); //pw입력부분 활성화하기
-            if (textPass.getText().length() > 0) { //pw에도 입력값 있을 때
+            if (textPass.getText().length() >= 4) { //pw에도 입력값 있을 때
                 buttonOk.setColleagueEnabled(true); //ok 버튼 활성화
             } else {
                 buttonOk.setColleagueEnabled(false); //없으면 비활성화
@@ -130,6 +131,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
             buttonOk.setColleagueEnabled(false);
         }
     }
+   
 
     @Override
     public void actionPerformed(ActionEvent e) {

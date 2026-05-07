@@ -1,3 +1,4 @@
+package ch17.Sample;
 import java.util.Random;
 
 public class RandomNumberGenerator extends NumberGenerator {
