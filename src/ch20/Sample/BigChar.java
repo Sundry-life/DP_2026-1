@@ -3,7 +3,8 @@ package ch20.Sample;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
+import java.nio.file.Paths; 
+//버전 안 맞아서 Path.of() 안 됨. 그래서 Paths.get()으로 변경 by 인공지능 도움
 public class BigChar {
     // 문자의 이름 
     private char charname;
@@ -16,7 +17,7 @@ public class BigChar {
         try {
             String filename = "big" + charname + ".txt";
             StringBuilder sb = new StringBuilder();
-            for (String line: Files.readAllLines(Path.of(filename))) {
+            for (String line: Files.readAllLines(Paths.get(filename))) {
                 sb.append(line);
                 sb.append("\n");
             }
