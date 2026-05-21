@@ -12,7 +12,8 @@ public class Main {
 
     public static void testAllocation(boolean shared) {
         for (int i = 0; i < bsarray.length; i++) {
-            bsarray[i] = new BigString("1212123", shared);
+            bsarray[i] = new BigString("1212123", shared); 
+            //BigString 1212123이걸 만 개 만듦.
         }
         showMemory();
     }
