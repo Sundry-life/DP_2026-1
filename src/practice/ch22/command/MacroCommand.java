@@ -5,7 +5,7 @@ import java.util.Deque;
 
 public class MacroCommand implements Command {
     // 명령의 배열 
-    private Deque<Command> commands = new ArrayDeque<>(); 
+    private Deque<Command> commands = new ArrayDeque<>(); //history여기에 쌓이는 거
 
     // 실행 
     @Override
