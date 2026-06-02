@@ -16,7 +16,7 @@ public abstract class Support {
         return next; //뒷사람을 리턴
     }
 
-    // 트러블 해결 절차를 결정한다 support 
+    // 트러블 해결 절차를 결정한다 support  //템플릿 메소드
     public void support(Trouble trouble) { 
         if (resolve(trouble)) { //내가 해결을 시도
             done(trouble); //resolve가 T면 done 성공하면 해결했다 선언
